@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API - Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dog API - Obține și afișează informații</h1>
+    </header>
+
+    <div class="content-container">
+        <div id="dog-data">
+            <p><strong>Rasa câinelui:</strong> <span id="breed-info">Nu există date încă</span></p>
+            <img id="dog-image" src="" alt="Dog Image" style="display:none;">
+        </div>
+
+        <div id="processing-section">
+            <h2>Procesare imagine</h2>
+            <canvas id="image-canvas"></canvas>
+        </div>
+    </div>
+
+    <div id="button-section">
+        <button id="refresh-button">Obține o altă imagine</button>
+        <button id="process-button">Procesează imaginea</button>
+        <button id="revert-button">Revert Changes</button>
+    </div>
+
+    <div id="results-section">
+        <h3>Rezultate procesare:</h3>
+        <ul id="results-list"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; Leu Petrișor-Andrei, 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

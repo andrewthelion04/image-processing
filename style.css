@@ -1,0 +1,184 @@
+/* stiluri generale */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f0fe; /* culoare de fundal placuta pentru ochi */
+    display: flex;
+    flex-direction: column; /* asiguram o aranjare pe verticala */
+    justify-content: space-between;
+    height: 100vh; /* ocupam intreaga inaltime a paginii */
+}
+
+header {
+    background-color: #0069d9; /* culoare de fundal mai intensa pentru header */
+    color: white; /* text alb pentru contrast */
+    padding: 30px; /* spatiu intern mai mare */
+    text-align: center; /* centram textul */
+    border-bottom: 5px solid #003366; /* adaugam o linie subtire sub header */
+}
+
+h1 {
+    margin: 0; /* eliminam marginile implicite */
+    font-size: 2.8em; /* dimensiune mai mare pentru titlu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* efect de umbra pe text pentru vizibilitate mai buna */
+}
+
+footer {
+    background-color:#0069d9; /* culoare de fundal identica cu header-ul */
+    color: white; /* text alb pentru continuitate vizuala */
+    text-align: center; /* centram textul */
+    padding: 15px; /* adaugam spatiu intern */
+    position: relative; /* evitam suprapunerea pe continut */
+    bottom: 0; /* pozitionam footer-ul la baza */
+    width: 100%; /* ocupam intreaga latime */
+    font-size: 0.9em; /* dimensiune mai mica a textului */
+}
+
+footer p:hover{
+    color: burlywood; /* schimbam culoarea la hover pentru interactivitate */
+}
+
+/* container pentru continut */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; /* spatiu intern pentru continut */
+    flex-grow: 1; /* extindem pentru a ocupa spatiul ramas */
+}
+
+#dog-data {
+    width: 250px; /* latime fixa pentru sectiunea cu datele cainelui */
+    height: 350px; /* inaltime fixa */
+    border: 3px solid #333; /* border vizibil pentru delimitare */
+    padding: 20px; /* spatiu intern */
+    background-color: #0069d9; /* fundal albastru pentru contrast */
+    text-align: left; /* aliniem textul la stanga */
+    margin-right: 20px; /* spatiu intre sectiuni */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* umbra usoara pentru efect 3d */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* centram continutul */
+    border-radius: 8px; /* colturi rotunjite pentru estetica */
+    transition: transform 0.3s ease; /* efect de tranzitie la hover */
+}
+
+#dog-data img {
+    border-radius:8px; /* colturi rotunjite pentru imagine */
+    border-width: 0cap; /* eliminam border-ul */
+}
+
+#dog-data:hover {
+    transform: scale(1.05); /* efect de zoom la hover pe div-ul de caine */
+}
+
+#dog-image {
+    width: 90%; /* imaginea ocupa 90% din div */
+    height: 90%; /* pastreaza proportiile */
+    object-fit: contain; /* asiguram incadrarea imaginii */
+    border-radius: 8px; /* colturi rotunjite */
+    transition: transform 0.3s ease; /* tranzitie lina pentru efecte */
+}
+
+#dog-image:hover {
+    transform: scale(1.1); /* zoom pe imaginea cainelui la hover */
+}
+
+/* sectiune de procesare */
+#processing-section {
+    flex-grow: 1; /* ocupam spatiul ramas */
+    margin-left:20px 0; /* spatiu lateral */
+    padding: 10px; /* spatiu intern */
+    text-align: center; /* centram continutul */
+    border: 3px #333; /* border subtire pentru delimitare */
+}
+
+#image-canvas {
+    width: 50%; /* dimensiune proportionala pentru canvas */
+    height: 310px; /* inaltime fixa */
+    border: 3px solid #333; /* border vizibil */
+    background-color: #f0f0f0; /* fundal neutru pentru canvas */
+    border-radius: 8px; /* colturi rotunjite pentru estetica */
+}
+
+/* sectiune pentru butoane */
+#button-section {
+    display: flex;
+    justify-content: center; /* centram butoanele */
+    margin-top: 20px; /* spatiu superior */
+    padding: 20px; /* spatiu intern */
+}
+
+button {
+    margin: 0 10px; /* spatiu intre butoane */
+    padding: 15px 30px; /* dimensiune mare pentru usurinta folosirii */
+    font-size: 16px; /* dimensiune potrivita a textului */
+    cursor: pointer; /* schimbam cursorul la hover */
+    background-color: #007bff; /* fundal albastru standard */
+    color: white; /* text alb pentru contrast */
+    border: none; /* eliminam border-ul */
+    border-radius: 8px; /* colturi rotunjite pentru estetica */
+    transition: background-color 0.3s, transform 0.3s ease; /* tranzitii pentru efecte vizuale */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* umbra usoara pentru efect 3d */
+}
+
+button:hover {
+    background-color: #0056b3; /* culoare mai inchisa la hover */
+    transform: translateY(-2px); /* efect de ridicare la hover */
+}
+
+button:active {
+    background-color: #003d7a; /* culoare mai inchisa la apasare */
+    transform: translateY(2px); /* efect de apasare */
+}
+
+button:focus {
+    outline: none; /* eliminam conturul implicit al butoanelor */
+}
+
+/* sectiune pentru rezultate */
+#results-section {
+    margin-top: 20px 0; /* spatiu superior */
+    margin-left: 20px 0;
+    margin-right: 20px 0;
+    text-align: left; /* aliniem textul la stanga */
+    padding: 20px; /* spatiu intern */
+    background-color: white; /* fundal alb pentru contrast */
+    border: 3px solid #333; /* border vizibil pentru delimitare */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* umbra usoara pentru efect 3d */
+    border-radius: 8px; /* colturi rotunjite */
+}
+
+#results-list {
+    list-style-type: none; /* eliminam punctele din lista */
+    padding: 0; /* eliminam padding-ul implicit */
+}
+
+#results-list li {
+    margin: 10px 0; /* spatiu intre elementele listei */
+    font-size: 16px; /* dimensiune potrivita a textului */
+    color: #333; /* culoare neutra pentru text */
+}
+
+/* stiluri responsive */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* reorganizam continutul pe verticala */
+        align-items: center; /* centram continutul */
+    }
+
+    #dog-data, #processing-section {
+        width: 90%; /* latime proportionala pentru ecrane mici */
+        margin-bottom: 20px; /* spatiu inferior intre sectiuni */
+    }
+
+    #image-canvas {
+        width: 90%; /* latime proportionala pentru canvas */
+    }
+
+    button {
+        width: 100%; /* butoanele ocupa toata latimea */
+        margin: 10px 0; /* spatiu intre butoane */
+    }
+}
